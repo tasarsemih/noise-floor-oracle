@@ -25,3 +25,21 @@ point early, enabling:
 
 This tool is designed to complement existing quantum compilation and
 runtime pipelines.
+
+## Roadmap: IBM Quantum Backend Integration
+
+The Noise Floor Oracle is designed to integrate seamlessly with
+IBM Quantum backends via Qiskit Runtime.
+
+Planned integration steps:
+
+1. Replace mock error model with backend-reported error metrics
+   (T1, T2, gate error rates).
+2. Execute depth-swept transpiled circuits using Qiskit Runtime.
+3. Measure empirical saturation points across multiple backends.
+4. Expose noise floor estimates as a callable runtime service.
+5. Enable compiler-level stopping rules based on detected noise floors.
+
+This roadmap allows gradual transition from simulation to
+real hardware without disrupting existing workflows.
+
